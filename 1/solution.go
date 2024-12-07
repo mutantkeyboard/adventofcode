@@ -40,6 +40,9 @@ func main() {
 	distance := calculateDistance(firstList, secondList)
 	fmt.Println("Total distance is: ", distance)
 
+	similarityScore := similarityScore(firstList, secondList)
+	fmt.Println("Total similarity score is: ", similarityScore)
+
 
 
 
@@ -47,6 +50,21 @@ func main() {
 		log.Fatal(err)
 	}	
 }
+
+func similarityScore(firstList []int, secondList []int) int {
+	count := make(map[int]int)
+	var similarityScore int
+	for _, num := range secondList {
+		count[num]++
+	}
+
+	for _, num := range firstList {
+		similarityScore += num * count[num]
+	}
+
+	return similarityScore
+}
+
 
 func calculateDistance(firstList []int, secondList []int) int {
 	var distance int
