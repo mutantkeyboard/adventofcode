@@ -12,14 +12,6 @@ run:
 		exit 1; \
 	fi
 
-# Run tests for specific day (if you add tests later)
-test:
-	@if [ -d "$(day)" ]; then \
-		cd $(day) && go test ./...; \
-	else \
-		echo "Day $(day) directory does not exist"; \
-		exit 1; \
-	fi
 
 # Clean build artifacts
 clean:
@@ -36,7 +28,6 @@ generate_day:
 	else \
 		mkdir -p $(day); \
 		echo "// Solution for Advent of Code 2024 - Day $(day)\n\npackage main\n\nfunc main() {\n\t// Your solution here\n}" > $(day)/solution.go; \
-		echo "package main\n\nimport (\n\t\"testing\"\n)\n\nfunc TestSolution(t *testing.T) {\n\t// Your tests here\n}" > $(day)/solution_test.go; \
 		echo "# Day $(day): [Problem Name]\n\n## Part One\n\n[Problem description]\n\n## Part Two\n\n[Problem description]" > $(day)/README.md; \
 		touch $(day)/input.txt; \
 		echo "Created directory and files for Day $(day)"; \
