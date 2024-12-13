@@ -49,12 +49,6 @@ To run a solution for a specific day:
 make run day=1  # Runs solution for Day 1
 ```
 
-### Running Tests
-
-To run tests for a specific day:
-```bash
-make test day=1  # Runs tests for Day 1
-```
 
 ### Cleaning Build Artifacts
 
