@@ -11,12 +11,10 @@ advent-of-code-2024/
 ├── 1/
 │   ├── README.md
 │   ├── solution.go
-│   ├── solution_test.go
 │   └── input.txt
 ├── 2/
 │   ├── README.md
 │   ├── solution.go
-│   ├── solution_test.go
 │   └── input.txt
 └── ...
 ```
