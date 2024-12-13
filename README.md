@@ -24,7 +24,6 @@ advent-of-code-2024/
 Each day's challenge is organized in its own directory, containing:
 - `README.md` - Problem description and notes
 - `solution.go` - Go implementation of the solution
-- `solution_test.go` - Tests for the solution
 - `input.txt` - Puzzle input data
 
 ## Usage
